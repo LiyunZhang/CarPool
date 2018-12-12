@@ -1,0 +1,190 @@
+<!-- LiyunZhang -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Passenger</title>
+		<meta charset="utf-8">
+		<meta name = "format-detection" content = "telephone=no" />
+		<link rel="icon" href="images/favicon.ico">
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" href="booking/css/booking.css">
+		<link rel="stylesheet" href="css/camera.css">
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-migrate-1.2.1.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/superfish.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		<script src="js/jquery.equalheights.js"></script>
+		<script src="js/jquery.mobilemenu.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/owl.carousel.js"></script>
+		<script src="js/camera.js"></script>
+		<!--[if (gt IE 9)|!(IE)]><!-->
+		<script src="js/jquery.mobile.customized.min.js"></script>
+		<!--<![endif]-->
+		<script src="booking/js/booking.js"></script>
+		<script>
+			$(document).ready(function(){
+				jQuery('#camera_wrap').camera({
+					loader: false,
+					pagination: false ,
+					minHeight: '444',
+					thumbnails: false,
+					height: '28.28125%',
+					caption: true,
+					navigation: true,
+					fx: 'mosaic'
+				});
+				$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+		</script>
+
+	</head>
+	<body class="page1" id="top">
+		<div class="main">
+<!--==============================header=================================-->
+			<header>
+				<div class="menu_block ">
+					<div class="container_12">
+						<div class="grid_12">
+							<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+								<ul class="sf-menu">
+									<li class="current"><a href="index.html">Passenger</a></li>
+									<li><a href="index-1.html">Driver</a></li>
+									<li><a href="index-2.html">Cars</a></li>
+									<li><a href="index-3.html">Map</a></li>
+								</ul>
+							</nav>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="container_12">
+					<div class="grid_12">
+						<!-- Change the logo -->
+						<h1>
+							<a href="index.html">
+								<img src="images/logo.png" alt="Your Carpool">
+							</a>
+						</h1>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</header>
+						
+<!--==============================Content=================================-->
+		
+			<div class="content"><div class="ic"></div>
+				<div class="container_12">
+					<div class="grid_5">
+						<h3>Booking Form</h3>
+						<!-- booking form -->
+						<form id="bookingForm" action="/booking/booking.php" method="Get">
+							<div class="fl1">
+								<div class="tmInput">
+									<label>Name:</label>
+									<input name="Name" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
+								</div>
+								<div class="tmInput">
+									<label>From:</label>												
+									<input name="From" type="text" data-constraints="@NotEmpty @Required ">
+								</div>
+							</div>
+							<div class="fl1">
+								<div class="tmInput">
+									<label>Phone:</label>
+									<input name="Phone" type="text" data-constraints="@NotEmpty @Required @Phone">
+								</div>
+								<div class="tmInput">
+									<label>To:</label>
+									<input name="To" type="text" data-constraints="@NotEmpty @Required">
+								</div>
+							</div>
+							<div class="clear"></div>
+							
+							<strong>Time</strong>
+							<div class="tmInput">								
+								<input name="Time" placeHolder="" type="time" data-constraints="@NotEmpty @Required">
+							</div>
+							<div class="clear"></div>
+
+							<strong>Date</strong>
+							<label class="tmDatepicker">
+								<input type="text" name="Date"	placeHolder='mm/dd/yyyy' data-constraints="@NotEmpty @Required @Date">
+							</label>
+							<div class="clear"></div>
+
+							<div class="tmRadio">
+								<p>Comfort</p>
+								<input name="Comfort" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' checked/>
+								<span>Cheap</span>
+								<input name="Comfort" type="radio" id="tmRadio1" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+								<span>Standart</span>
+								<input name="Comfort" type="radio" id="tmRadio2" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+								<span>Lux</span>
+							</div>
+							<div class="clear"></div>
+							<div class="fl1 fl2">
+								<em>Adults</em>
+								<select name="Adults" class="tmSelect auto" data-class="tmSelect tmSelect2">
+									<option>1</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+								<div class="clear height1"></div>
+							</div>
+						
+
+							<div class="tmTextarea">
+								<textarea name="Message" placeHolder="Message"></textarea>
+							</div>
+
+							<a href="index-3.html" class="btn" data-type="submit">Search</a>
+							<!-- <action ="index-3.html" class="btn" data-type="submit">Search</a> -->
+								<!-- <input type="submit" value="Search"> -->
+						</form>
+					</div>
+					<div class="grid_6 prefix_1">
+						<a href="index-2.html" class="type"><img src="images/page1_img1.jpg" alt=""><span class="type_caption">Economy</span></a>
+						<a href="index-2.html" class="type"><img src="images/page1_img2.jpg" alt=""><span class="type_caption">Standard</span></a>
+						<a href="index-2.html" class="type"><img src="images/page1_img3.jpg" alt=""><span class="type_caption">Lux</span></a>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>		
+		</div>
+		
+<!--==============================footer=================================-->
+		<footer>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="f_phone"><span>Call Us:</span> + 123456789</div>
+					<div class="socials">
+						<a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+						<a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+						<a href="https://plus.google.com/" class="fa fa-google-plus"></a>
+					</div>
+					<div class="copy">
+						<div class="st1">
+						&copy; 2018	| Privacy Policy </div> 
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</footer>
+		<script>
+			$(function (){
+				$('#bookingForm').bookingForm({
+					ownerEmail: '#'
+				});
+			})
+			$(function() {
+				$('#bookingForm input, #bookingForm textarea').placeholder();
+			});
+		</script>
+	</body>
+</html>

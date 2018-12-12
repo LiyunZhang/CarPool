@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Driver</title>
+		<meta charset="utf-8">
+		<meta name = "format-detection" content = "telephone=no" />
+		<link rel="shortcut icon" href="images/favicon.ico"/>
+        <link rel="stylesheet" href="booking/css/booking.css">
+        <link rel="stylesheet" href="css/camera.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-migrate-1.2.1.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/superfish.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		<script src="js/jquery.equalheights.js"></script>
+		<script src="js/jquery.mobilemenu.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/owl.carousel.js"></script>
+		<script src="js/camera.js"></script>
+		<script src="js/jquery.mobile.customized.min.js"></script>
+		<script src="booking/js/booking.js"></script>
+		<script>
+			$(document).ready(function(){
+				jQuery('#camera_wrap').camera({
+                    loader: false,
+                    pagination: false,
+                    minHeight: '444',
+                    thumbnails: false,
+                    height: '28.28125%',
+                    caption: true,
+                    navigation: true,
+                    fx: 'mosaic'
+                });
+				$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+		</script>
+	
+	</head>
+	<body class="" id="top">
+		<div class="main">
+<!--==============================header=================================-->
+			<header>
+				<div class="menu_block">
+					<div class="container_12">
+						<div class="grid_12">
+							<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+								<ul class="sf-menu">
+									<li><a href="index.html">Passenger</a></li>
+									<li class="current"><a href="index-1.html">Driver</a></li>
+									<li><a href="index-2.html">Cars</a></li>
+									<li><a href="index-3.html">Map</a></li>									
+								</ul>
+							</nav>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="container_12">
+					<div class="grid_12">
+						<h1>
+							<a href="index.html">
+								<img src="images/logo.png" alt="Your Carpool">
+							</a>
+						</h1>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</header>
+<!--==============================Content=================================-->
+			
+			<div class="content">
+					<div class="ic"></div>
+					<div class="container_12">
+						<div class="grid_5">
+							<h3>Post a Ride</h3>
+							<form id="driverForm" action="index-3.html" method="POST">								
+								<div class="tmInput">
+										<label>Name:</label>
+									<input name="dName" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
+								</div>
+									
+								<div class="tmInput">
+										<label>Phone:</label>
+									<input name="dPhone" type="text" data-constraints="@NotEmpty @Required @Phone">
+								</div>
+								<div class="tmInput">
+										<label>Depature:</label>
+									<input name="dFrom" placeHolder="From" type="text" data-constraints="@NotEmpty @Required ">
+								</div>
+
+								<div class="tmInput">
+										<label>Arrival:</label>
+									<input name="dTo" placeHolder="To" type="text" data-constraints="@NotEmpty @Required">
+								</div>
+								
+								<div class="clear"></div>
+								
+								<div class="tmInput">
+										<label>Time:</label>
+									<input name="dTime" placeHolder="" type="time" data-constraints="@NotEmpty @Required">
+								</div>
+								<div class="clear"></div>
+								
+								<div class="tmDatepicker">
+										<label>Date:</label>
+									<input type="date" id="dDate" name="dDate" placeHolder="Select a Date" data-constraints="@NotEmpty @Required @Date">
+								</div>
+								<div class="clear"></div>
+
+								<div class="drRadio">
+									<p>Vehicle Type</p>
+									<input name="VehicleType" type="radio" id="drRadio0"
+										data-constraints='@RadioGroupChecked(name="VehicleType", groudr=[RadioGroup])'
+										checked/>
+									<span>Sedan</span>
+									<input name="VehicleType" type="radio" id="drRadio1"
+										data-constraints='@RadioGroupChecked(name="VehicleType", groudr=[RadioGroup])'/>
+									<span>Van</span>
+									<input name="VehicleType" type="radio" id="drRadio2"
+										data-constraints='@RadioGroupChecked(name="VehicleType", groudr=[RadioGroup])'/>
+									<span>SUV/Truck</span>
+								</div>
+								<div class="clear"></div>
+
+								<div class="fl1 fl2"><br>
+									Seats Available
+									<select name="Seats" class="drSelect auto" data-class="drSelect drSelect2" data-constraints="">
+										<option>1</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>										
+									</select>
+									<div class="clear height1"></div>
+								</div>
+								<div class="fl1 fl2"><br>
+									Years of Experience
+									<select name="Experience" class="drSelect auto" data-class="drSelect drSelect2"
+											data-constraints="">
+										<option>1-2</option>
+										<option>1-2</option>
+										<option>3-5</option>
+										<option>6-9</option>
+										<option>10+</option>
+									</select>
+								</div>
+								<div class="clear"></div>
+								<!-- <div class="drTextarea">
+									<textarea name="dMessage"
+											placeHolder="Notes (Car Model and Make, Smoking Rules, Passenger Music Choice, etc.)"
+											data-constraints='@NotEmpty @Required @Length(min=20,max=999999)'>
+									</textarea>
+								</div> -->
+								
+								<a href="index-3.html" class="btn" data-type="submit">Submit</a>
+							</form>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+				
+<!--==============================footer=================================-->
+		<footer>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="f_phone"><span>Call Us:</span> + 123456789</div>
+					<div class="socials">
+						<a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+						<a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+						<a href="https://plus.google.com/" class="fa fa-google-plus"></a>
+					</div>
+					<div class="copy">
+						<div class="st1">
+						&copy; 2018	| Privacy Policy </div> 
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</footer>
+	</body>
+</html>
